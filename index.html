@@ -147,7 +147,39 @@
         </td>
       </tr>
   
-  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+ 
+
+    <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'aperture_image'><img src='road_output.gif'></div>
+        <img src='road_output.gif'>
+        </div>
+        <script type="text/javascript">
+        function aperture_start() {
+        document.getElementById('aperture_image').style.opacity = "1";
+        }
+        function aperture_stop() {
+        document.getElementById('aperture_image').style.opacity = "0";
+        }
+        aperture_stop()
+        </script>
+      </td>
+      <td valign="top" width="75%">
+            <papertitle>Road Traffic Intensity Monitoring in Real Time</papertitle>
+    <br>
+          
+     <p>Authors: <strong>Hasib Zunair</strong> </p>
+     <br>
+        <a href="https://github.com/hasibzunair/road-traffic-count-and-intensity">GitHub</a> / <a href="https://www.researchgate.net/project/Road-Traffic-Intentsity-Monitoring">ResearchGate</a>
+        <p></p>
+        <p>To detect vehicles in bangladesh (i.e rickshaws, vans etc.) and
+extract the current road condition in the form on intensity. YOLO Object detection is to be used which will be trained on
+a custom dataset of the vehicles in the context of Bangladesh. It will also have three classes - low, medium, high traffic.</p>
+      </td>
+    </tr>
+
+ <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
 
     <tr onmouseout="jump_stop()" onmouseover="jump_start()"  bgcolor="#ffffd0">
@@ -182,38 +214,6 @@
         </td>
       </tr>
 
-
-
-
-    <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-      <td width="25%">
-        <div class="one">
-        <div class="two" id = 'aperture_image'><img src='road_output.gif'></div>
-        <img src='road_output.gif'>
-        </div>
-        <script type="text/javascript">
-        function aperture_start() {
-        document.getElementById('aperture_image').style.opacity = "1";
-        }
-        function aperture_stop() {
-        document.getElementById('aperture_image').style.opacity = "0";
-        }
-        aperture_stop()
-        </script>
-      </td>
-      <td valign="top" width="75%">
-            <papertitle>Road Traffic Intensity Monitoring in Real Time</papertitle>
-    <br>
-          
-     <p>Authors: <strong>Hasib Zunair</strong> </p>
-     <br>
-        <a href="https://github.com/hasibzunair/road-traffic-count-and-intensity">GitHub</a> / <a href="https://www.researchgate.net/project/Road-Traffic-Intentsity-Monitoring">ResearchGate</a>
-        <p></p>
-        <p>To detect vehicles in bangladesh (i.e rickshaws, vans etc.) and
-extract the current road condition in the form on intensity. YOLO Object detection is to be used which will be trained on
-a custom dataset of the vehicles in the context of Bangladesh. It will also have three classes - low, medium, high traffic.</p>
-      </td>
-    </tr>
 
 
          <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
