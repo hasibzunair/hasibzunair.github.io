@@ -75,9 +75,8 @@
         <!--
         <p>I am a software engineer at <a href="https://think-brick.com/">Think Bricks LLC</a>, where I work on predictive models for computer aided diagnostic(CADx) systems. Alongside Think Bricks, I am working on deep learning and its application in computer vision with <a href="http://ece.northsouth.edu/people/dr-nabeel-mohammed/">Dr. Nabeel Mohammed</a>. Previously, I was at <a href="http://www.thetechacademy.net/">The Tech Academy</a>, where I worked on embedded input devices, robotics and computer vision.
         </p>
-
         -->
-
+        
         <p>I am working on deep learning and its application in computer vision with <a href="http://ece.northsouth.edu/people/dr-nabeel-mohammed/">Dr. Nabeel Mohammed</a> from North South University. Previously, I was at <a href="http://www.thetechacademy.net/">The Tech Academy</a>, where I worked on embedded input devices, robotics and computer vision.
         </p>
         <p>
@@ -156,7 +155,39 @@
         </td>
       </tr>
   
- 
+      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
+        <td width="25%">
+          <div class="one">
+          <div class="two" id = 'aperture_image'><img src='imageclef2019.jpg'></div>
+          <img src='imageclef2019.jpg'>
+          </div>
+          <script type="text/javascript">
+          function aperture_start() {
+          document.getElementById('aperture_image').style.opacity = "1";
+          }
+          function aperture_stop() {
+          document.getElementById('aperture_image').style.opacity = "0";
+          }
+          aperture_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+              <papertitle>Estimating Severity from CT Scans of Tuberculosis Patients using 3D Convolutional Nets</papertitle>
+      <br>
+            
+       <p>Authors: <strong>Hasib Zunair</strong>, Aimon Rahman, Nabeel Mohammed</p>
+       <br>
+          <a href="https://github.com/hasibzunair/tuberculosis-severity">GitHub</a> / <a href="">ResearchGate</a>
+          <p></p>
+          <p><font color="red"><strong>(10th place overall)</strong></font></p>
+          <p>A 16-layer 3D
+            convolutional neural network with a slice selection technique employed in the task of 3D Computed Tomography Image
+            data of Tuberculosis(TB) patients which attained 10th place among a total of 100 participants in the ImageCLEF 2019
+            Tuberculosis - Severity scoring challenge. The goal is aimed at estimating TB severity based on the CT image. The best
+            result reported in this work is Area Under the ROC Curve (AUC) of 0.61 and a binary accuracy of 61.5/100.
+          </p>
+        </td>
+      </tr>
       
     <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
       <td width="25%">
