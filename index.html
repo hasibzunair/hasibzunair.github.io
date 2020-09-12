@@ -77,14 +77,14 @@
 	Comment..
         -->
         
-        <p>I am currently a MASc student, advised by <a href="https://users.encs.concordia.ca/~hamza/">Prof. A. Ben Hamza</a> at Concordia where I work on the field of computer vision and machine learning. I am also a research intern at <a href="https://www.decathlon.ca/en/">Décathlon Canada</a> where I work on improving the computer vision models in the <a href="https://developers.decathlon.com/products/sport-vision/docs">Sports Vision API</a> using semi-supervised learning. Previously, I was a software engineer at <a href="https://www.think-bricks.com/">Think Bricks LLC</a>. There, I worked on the deep learning algorithm used in <a href="https://www.smart-retina.com/">Smart Retina</a>. I also developed open-source robots at <a href="http://www.thetechacademy.net/">The Tech Academy</a>.
+        <p>I am currently a MASc student, advised by <a href="https://users.encs.concordia.ca/~hamza/">Prof. A. Ben Hamza</a> at Concordia where I work on computer vision and machine learning. I am also a research intern at <a href="https://www.decathlon.ca/en/">Décathlon Canada</a> where I work on improving the computer vision models in the <a href="https://developers.decathlon.com/products/sport-vision/docs">Sports Vision API</a> using semi-supervised learning. Previously, I was a software engineer at <a href="https://www.think-bricks.com/">Think Bricks LLC</a>. I worked on the deep learning algorithm used in <a href="https://www.smart-retina.com/">Smart Retina</a>. I also developed open-source robots at <a href="http://www.thetechacademy.net/">The Tech Academy</a>.
         </p>
         <p>
           I was first exposed to research during my bachelors at <a href="http://www.northsouth.edu/">North South University</a> when I was a research assistant for <a href="http://ece.northsouth.edu/people/dr-nabeel-mohammed/">Dr. Nabeel Mohammed</a>. I served as the founding chair of <a href="https://ieeensu.org/ieee-nsu-ras-sbc/">IEEE Robotics and Automation Society (RAS) Student Branch Chapter</a> which is the first RAS student chapter in Bangladesh</a>.
         </p>
 
 	<p>
-	 I also like to cook fancy meals (<i>beauty is in the eye of the beholder</i>) and play competitive esports, CSGO and Dota 2, during my free time. If you're into esports, add me on <a href="https://steamcommunity.com/id/hasibzunair1994/">Steam</a>! I also like cute dog videos! 🐕 
+	 I also like to cook fancy meals (<i>beauty is in the eye of the beholder</i>) and play competitive esports, Dota 2 and CSGO, during my free time. If you're into esports, add me on <a href="https://steamcommunity.com/id/hasibzunair1994/">Steam</a>! I also like funny dog <a href="https://www.instagram.com/barked/?hl=en">videos</a>! 🐕 
 	</p
         <p align=center>
           <a href="mailto:hasibzunair@gmail.com">Email</a> &nbsp/&nbsp
@@ -222,12 +222,105 @@
 
 
 
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+        <td width="25%">
+          <div class="one">
+            <div class="two" id = 'jump_image'><img src='malariadetection2019.png'></div>
+            <img src='malariadetection2019.png'>
+          </div>
+          <script type="text/javascript">
+            function jump_start() {
+              document.getElementById('jump_image').style.opacity = "1";
+            }
+            function jump_stop() {
+              document.getElementById('jump_image').style.opacity = "0";
+            }
+            jump_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+          <p><a href="https://arxiv.org/abs/1907.10418">
+          <papertitle>Improving Malaria Parasite Detection from Red Blood Cell using Deep Convolutional Neural Networks</papertitle></a></p>
+          <p>Authors : Aimon Rahman, <strong>Hasib Zunair</strong>, M Sohel Rahman, Jesia Quader Yuki, Sabyasachi Biswas, Md Ashraful Alam, Nabila Binte Alam, M.R.C. Mahdy</p> 
+          <em>arXiv</em>, 2019<br>
+          <a href="https://arxiv.org/abs/1907.10418">Paper</a> / <a href="https://github.com/hasibzunair/malaria-detection">Code</a> 
+           
+            <p>Benchmark several classification algorithms for the task of detecting malaria from microscopic images of red blood cells. Transfer learning approach worked best in our study.</p>
+            <p></p>
+            </a></p>
+          </td>
+        </tr>
+
+
+
+      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+        <td width="25%">
+          <div class="one">
+          <div class="two" id = 'aperture_image'><img src='fastmri2019.png'></div>
+          <img src='fastmri2019.png'>
+          </div>
+          <script type="text/javascript">
+          function aperture_start() {
+          document.getElementById('aperture_image').style.opacity = "1";
+          }
+          function aperture_stop() {
+          document.getElementById('aperture_image').style.opacity = "0";
+          }
+          aperture_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+            <p><a href="https://fastmri.org/leaderboards/challenge/2019/">
+              <papertitle>Res-U-Net architecture for reconstruction of high resolution knee MRI scans</papertitle></a></p>
+       <p>Authors: <strong>Hasib Zunair</strong>, Aimon Rahman</p>
+       <em>fastMRI Image Reconstruction Challenge (Single coil track), Facebook AI Research</em>, 2019<br>
+          <a href="https://github.com/hasibzunair/res-unet-fastmri">Code</a>
+          <p></p>
+          <p> Train a U-Net architecture with a pretrained ResNet backbone on knee MRIs at the slice level. The goal was to reconstruct high resolution images from the given undersampled image. Ranked <strong>last</strong> in the <a href="https://www.imageclef.org/2019/medical/tuberculosis"> final leaderboard</a>.
+          </p>
+        </td>
+      </tr>
+
+
+      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+        <td width="25%">
+          <div class="one">
+          <div class="two" id = 'aperture_image'><img src='imageclef2019.jpg'></div>
+          <img src='imageclef2019.jpg'>
+          </div>
+          <script type="text/javascript">
+          function aperture_start() {
+          document.getElementById('aperture_image').style.opacity = "1";
+          }
+          function aperture_stop() {
+          document.getElementById('aperture_image').style.opacity = "0";
+          }
+          aperture_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+            <p><a href="http://www.dei.unipd.it/~ferro/CLEF-WN-Drafts/CLEF2019/paper_77.pdf">
+              <papertitle>Estimating Severity from CT Scans of Tuberculosis Patients using 3D Convolutional Nets</papertitle></a></p>
+       <p>Authors: <strong>Hasib Zunair</strong>, Aimon Rahman, Nabeel Mohammed</p>
+       <em>CLEF Working Notes - Conference and Labs of the Evaluation Forum</em>, 2019<br>
+          <a href="https://www.researchgate.net/publication/334680379_Estimating_Severity_from_CT_Scans_of_Tuberculosis_Patients_using_3D_Convolutional_Nets_and_Slice_Selection">Paper</a> / <a href="https://github.com/hasibzunair/tuberculosis-severity">Code</a>
+          <p></p>
+          <p>A 3D CNN with a slice selection method employed in the task of chest CT image analysis
+            for predicting tuberculosis (TB). Our method achieved 10-th place among a total of 100 participants in the <a href="https://www.imageclef.org/2019/medical/tuberculosis"> ImageCLEF 2019
+              Tuberculosis SVR - Severity scoring</a>.
+          </p>
+        </td>
+      </tr>
+
+
+
 
     <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
       <td width="25%">
         <div class="one">
-          <div class="two" id = 'jump_image'><img src='out2.png'></div>
-          <img src='out2.png'>
+          <div class="two" id = 'jump_image'><img src='unconventionalwisdom2018.png'></div>
+          <img src='unconventionalwisdom2018.png'>
         </div>
         <script type="text/javascript">
           function jump_start() {
@@ -254,41 +347,7 @@
 
 
 
-
-  
-      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
-        <td width="25%">
-          <div class="one">
-          <div class="two" id = 'aperture_image'><img src='imageclef2019.jpg'></div>
-          <img src='imageclef2019.jpg'>
-          </div>
-          <script type="text/javascript">
-          function aperture_start() {
-          document.getElementById('aperture_image').style.opacity = "1";
-          }
-          function aperture_stop() {
-          document.getElementById('aperture_image').style.opacity = "0";
-          }
-          aperture_stop()
-          </script>
-        </td>
-        <td valign="top" width="75%">
-            <p><a href="https://drive.google.com/open?id=1CfiFK1WVPXEeGMQlv48uiWp5HQ51vdM-">
-              <papertitle>Estimating Severity from CT Scans of Tuberculosis Patients using 3D Convolutional Nets</papertitle></a></p>
-       <p>Authors: <strong>Hasib Zunair</strong>, Aimon Rahman, Nabeel Mohammed</p>
-       <em>CLEF Working Notes - Conference and Labs of the Evaluation Forum</em>, 2019<br>
-          <a href="https://github.com/hasibzunair/tuberculosis-severity">GitHub</a> / <a href="http://www.dei.unipd.it/~ferro/CLEF-WN-Drafts/CLEF2019/">CEUR-WS</a> / <a href="https://www.researchgate.net/publication/334680379_Estimating_Severity_from_CT_Scans_of_Tuberculosis_Patients_using_3D_Convolutional_Nets_and_Slice_Selection">ResearchGate</a>
-          <p></p>
-          <p>A 3D CNN with a slice selection method employed in the task of chest CT image analysis
-            for predicting tuberculosis (TB). Our method achieved 10-th place among a total of 100 participants in the <a href="https://www.imageclef.org/2019/medical/tuberculosis"> ImageCLEF 2019
-              Tuberculosis SVR - Severity scoring</a>.
-          </p>
-        </td>
-      </tr>
-
-
-
-      
+    
      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
       <td width="25%">
         <div class="one">
@@ -308,11 +367,11 @@
 
 
       <td valign="top" width="75%">
-        <p><a href="https://drive.google.com/open?id=1rhahAVqumweS5rm0s8L6nTziD1PixfnO">
+        <p><a href="https://ieeexplore.ieee.org/abstract/document/8535928">
         <papertitle>Design and Implementation of an Automated Web Based Multifunctional Attendance System</papertitle></a></p>
         <p>Authors : <strong>Hasib Zunair</strong>, Oishi Maniha, Jubayer Kabir</p> 
         <em>International Conference on Smart Sensors and Applications (ICSSA)</em>, 2018  <font color="red"><strong>(Best Paper)</strong></font><br>
-          <a href="">GitHub</a> / <a href="">ResearchGate</a> / <a href="https://drive.google.com/open?id=1-TZIqdn-yAMrQZzFy0vFnX2vNpStaBKK">Slides</a>
+          <a href="https://ieeexplore.ieee.org/abstract/document/8535928">Paper</a> / <a href="https://drive.google.com/open?id=1-TZIqdn-yAMrQZzFy0vFnX2vNpStaBKK">Slides</a>
           <p></p>
           <p>Implementation of an automated multifunctional attendance system which uses rfid, fingerprint, and real time facial recognition.</p>
           <p></p>
@@ -340,11 +399,11 @@
 
 
       <td valign="top" width="75%">
-        <p><a href="https://drive.google.com/open?id=1jX7_G_XfK9D4AmJnsFoRsErLpLSgnw2U">
+        <p><a href="https://ieeexplore.ieee.org/abstract/document/8535976">
         <papertitle>Design and Implementation of an IOT based Monitoring System for Inland Vessels using Multiple Sensor Network</papertitle></a></p>
         <p>Authors : <strong>Hasib Zunair</strong>, Wordh Ul Hasan, Kimia Tuz Zaman, Irfanul Haque, Shoumik Shekhar Aoyon</p>
         <em>International Conference on Smart Sensors and Applications (ICSSA)</em>, 2018<br>
-          <a href="">ResearchGate</a> / <a href="https://drive.google.com/open?id=1pQc4Q5gT4CLA_1_DUx2Ln04lcYBeDR2q">Slides</a>
+          <a href="https://www.researchgate.net/publication/324173874_Design_and_Implementation_of_an_IoT_Based_Monitoring_System_for_Inland_Vessels_Using_Multiple_Sensors_Network">Paper</a> / <a href="https://drive.google.com/open?id=1pQc4Q5gT4CLA_1_DUx2Ln04lcYBeDR2q">Slides</a>
           <p></p>
           <p>A wireless sensor
 network with a real time web application for monitoring
@@ -354,6 +413,41 @@ overloading.</p>
           </a></p>
         </td>
       </tr>
+
+
+    
+    <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+      <td width="25%">
+        <div class="one">
+          <div class="two" id = 'jump_image'><img src='ams2017.png'></div>
+          <img src='ams2017.png'>
+        </div>
+        <script type="text/javascript">
+          function jump_start() {
+            document.getElementById('jump_image').style.opacity = "1";
+          }
+          function jump_stop() {
+            document.getElementById('jump_image').style.opacity = "0";
+          }
+          jump_stop()
+        </script>
+      </td>
+
+
+      <td valign="top" width="75%">
+        <p><a href="https://ieeexplore.ieee.org/abstract/document/8424310/">
+        <papertitle>Design and Implementation of Security Patrol Robot using Andrioid Application</papertitle></a></p>
+        <p>Authors : Tahzib Mashrik, <strong> Hasib Zunair</strong>, Maofic Farhan Karin</p> 
+        <em>Asia Modelling Symposium (AMS)</em>, 2017<br>
+        <a href="https://www.researchgate.net/publication/323695337_Design_and_Implementation_of_Security_Patrol_Robot_using_Android_Application">Paper</a> / <a href="https://drive.google.com/open?id=15Fr7CjBtSqU3j9R3kBXyfMClV5NuLAbD">Slides</a>
+          <p></p>
+          <p>A low-cost autonomous mobile security robot based on a multisensor system for the purpose of sending alarms remotely. </p>
+          <p></p>
+          </a></p>
+        </td>
+      </tr>
+
+
 
 
  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -373,11 +467,11 @@ overloading.</p>
         
 
 
-        <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
+      <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
           <td width="25%">
             <div class="one">
-              <div class="two" id = 'jump_image'><img src='python_workshop.jpg'></div>
-              <img src='python_workshop.'>jpg
+              <div class="two" id = 'jump_image'><img src='wks3.jpg'></div>
+              <img src='wks3.'>jpg
             </div>
             <script type="text/javascript">
               function jump_start() {
@@ -389,17 +483,17 @@ overloading.</p>
               jump_stop()
             </script>
           </td>
-
-
-
-        <td valign="top" width="75%">
-          <papertitle>Introduction to Python Programming</papertitle></a></p>
-          <em>Robotics and Automation Society IEEE NSU Student Branch Chapter</em>, 2018
-          <br>
-            <p>Day long workshop on basics of computer programming using Python. Materials are avaiable on <a href="https://github.com/hasibzunair/ieee19-py">code</a>.</p>
-            </a></p>
-          </td>
-        </tr>
+    
+    
+          <td valign="top" width="75%">
+            <papertitle>Image Classification with Python and Keras</papertitle></a></p>
+            
+            <em>IEEE NSU Student Branch, North South University</em>, Summer 2019
+            <br>
+              <p>A technical workshop on image classification using Python and Keras. Participants built there deep learning models and later we had a small competition to see who got the highest numbers. Materials available <a href="https://github.com/hasibzunair/ieee19-py">here</a>.</p>
+              </a></p>
+            </td>
+          </tr>
 
 
 
@@ -425,10 +519,43 @@ overloading.</p>
         <papertitle>Basics of Image Processing and Computer Vision</papertitle></a></p>
         <em>Robotics and Automation Society IEEE NSU Student Branch Chapter</em>, 2018
             <br> 
-          <p>A hands on technical session on compter vision where participants learn image manipulation and segmentation using OpenCV. Materials available at <a href="https://github.com/hasibzunair/ieee18-cv">code</a>.</p>
+          <p>A hands on technical session on compter vision where participants learn image manipulation and segmentation using OpenCV. Materials available <a href="https://github.com/hasibzunair/ieee18-cv">here</a>.</p>
           </a></p>
         </td>
       </tr>
+
+
+
+        <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
+          <td width="25%">
+            <div class="one">
+              <div class="two" id = 'jump_image'><img src='python_workshop.jpg'></div>
+              <img src='python_workshop.'>jpg
+            </div>
+            <script type="text/javascript">
+              function jump_start() {
+                document.getElementById('jump_image').style.opacity = "1";
+              }
+              function jump_stop() {
+                document.getElementById('jump_image').style.opacity = "0";
+              }
+              jump_stop()
+            </script>
+          </td>
+
+
+
+        <td valign="top" width="75%">
+          <papertitle>Introduction to Python Programming</papertitle></a></p>
+          <em>Robotics and Automation Society IEEE NSU Student Branch Chapter</em>, 2018
+          <br>
+            <p>Day long workshop on basics of computer programming using Python. Materials are avaiable <a href="https://github.com/hasibzunair/ieee19-py">here</a>.</p>
+            </a></p>
+          </td>
+        </tr>
+
+
+
 
       <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
           <td width="25%">
