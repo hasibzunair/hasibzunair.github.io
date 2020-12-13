@@ -55,6 +55,11 @@
     }
   </style>
   
+<!--
+  width: 0;
+  height: 0;
+-->
+
   <title>Hasib Zunair</title>
   <link rel="icon" type="image/png" href="my_icon.png">
   </head>
@@ -74,19 +79,18 @@
         -->
         
         <p>I am currently a MASc. student, working on computer vision and machine learning with applications in medical imaging 
-          advised by <a href="https://users.encs.concordia.ca/~hamza/">Prof. A. Ben Hamza</a> at <a href="https://www.concordia.ca/">Concordia University</a>. I recieved 
+          advised by <a href="https://users.encs.concordia.ca/~hamza/">Prof. A. Ben Hamza</a> at <a href="https://www.concordia.ca/">Concordia University</a>. I also recieved 
           the <a href="https://www.mitacs.ca/en/programs/accelerate/fellowship">MITACS Accelerate Fellowship</a> to work jointly with Concordia and
-          <a href="https://www.decathlon.ca/en/">Décathlon Canada</a> on the <a href="https://developers.decathlon.com/products/sport-vision">Sports Vision API</a>
-          using semi-supervised learning and large-scale unlabelled data. Previously,
+          <a href="https://developers.decathlon.com/products/sport-vision">Décathlon Canada</a> on computer vision and 
+          semi-supervised learning using large-scale unlabelled data. Previously,
           I was a software engineer at <a href="https://www.think-bricks.com/">Think Bricks LLC</a> where I 
           worked on <a href="https://www.smart-retina.com/">Smart Retina</a>, a tool which predicts the severity of 
           diabetic retinopathy from fundus images. I also developed open-source 
           robots at <a href="http://www.thetechacademy.net/">The Tech Academy</a>!
         </p>
         <p>
-          I was first exposed to research during my bachelors 
-          at <a href="http://www.northsouth.edu/">North South University</a> when I was a research assistant 
-          for <a href="http://ece.northsouth.edu/people/dr-nabeel-mohammed/">Dr. Nabeel Mohammed</a>. I served as the 
+          During my bachelors at <a href="http://www.northsouth.edu/">North South University</a>, I was first exposed to research 
+          when I was advised by <a href="http://ece.northsouth.edu/people/dr-nabeel-mohammed/">Dr. Nabeel Mohammed</a>. I served as the 
           founding chair of <a href="https://ieeensu.org/ieee-nsu-ras-sbc/">IEEE Robotics and Automation Society (RAS) Student Branch Chapter</a> which 
           is the first RAS student chapter in Bangladesh</a>.
         </p>
@@ -126,8 +130,7 @@
           <heading>Research</heading>
           <p>
            My research invovles developing artificial intelligence (AI)-based 
-           systems for analysis, interpretation and enhancement of medical images of multiple modalities,
-           including X-ray, Fundus and CT. During my bachleors, I 
+           systems for analysis, interpretation and enhancement of medical images, both 2D and 3D, of multiple modalities (e.g. radiology and pathology). During my bachleors, I 
            <a href="https://www.youtube.com/channel/UCyvN-_SUKYrOXQpSvUgxTBQ/videos?view_as=subscriber"> worked</a> on 
            open-source mobile robots.
           </p>
@@ -254,7 +257,7 @@
           <papertitle>Melanoma Detection using Adversarial Training and Deep Transfer Learning</papertitle></a></p>
           <p>Authors : <strong>Hasib Zunair</strong> and A. Ben Hamza</p> 
           <em>Physics in Medicine and Biology</em>, 2020<br>
-          <a href="https://arxiv.org/abs/2004.06824">Paper</a> / <a href="https://github.com/hasibzunair/adversarial-lesions">Code</a> 
+          <a href="https://arxiv.org/abs/2004.06824">Paper</a> / <a href="https://github.com/hasibzunair/adversarial-lesions">Code</a> / <a href="https://aiderm.herokuapp.com/">Demo</a> 
            
             <p>Improved classification performance by synthesizing under-represented class samples from the over-represented ones. Synthetic samples are used as additional training data to reduce class imbalance.</p>
             <p></p>
@@ -530,6 +533,34 @@ overloading.</p>
         </tr>
       </table>
 
+    
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
+          <td width="25%">
+            <div class="one">
+              <div class="two" id = 'jump_image'><img src='melanoma_detection_application.png'></div>
+              <img src='melanoma_detection_application.png'>
+            </div>
+            <script type="text/javascript">
+              function jump_start() {
+                document.getElementById('jump_image').style.opacity = "1";
+              }
+              function jump_stop() {
+                document.getElementById('jump_image').style.opacity = "0";
+              }
+              jump_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+            <p><a href="https://aiderm.herokuapp.com/">
+              <papertitle>AI Dermatology Assistant</papertitle></a></p>
+              <p>A prototype web application for predicting the presence of 
+                melanoma from dermoscopic skin lesions using neural networks.</p>
+              <a href="https://github.com/hasibzunair/adversarial-lesions">AI Model Code</a> / <a href="https://github.com/hasibzunair/adversarial-lesions-app-demo">Application Code</a> / <a href="https://github.com/hasibzunair/adversarial-lesions-rest-api-demo">REST API Code</a>
+          </td>
+        </tr>
+
+
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
           <td width="25%">
@@ -551,7 +582,7 @@ overloading.</p>
             <p><a href="https://keras.io/examples/vision/3D_image_classification/">
               <papertitle>3D Image Classification from CT Scans</papertitle></a></p>
               <p>Train a 3D convolutional neural network to predict presence of pneumonia.</p>
-              <em>Keras Documentation</em>, 2020<br>
+              <em>Keras Docs</em>, 2020<br>
           </td>
         </tr>
 
@@ -635,10 +666,9 @@ overloading.</p>
       </td>
       <td valign="top" width="75%">
         <p> <a href="URL_WILL_BE_ADDED_SOON"> Teaching Assistant (Lab Demonstrator), COMP 6771: Image Processing</a></p>
-        <em>Concordia University</em>, Winter 2021    
-      </a></p>
-        </td>
-      </tr>
+        <em>Concordia University</em>, Winter 2021
+      </td>
+    </tr>
       
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr onmouseout="jump_stop()" onmouseover="jump_start()" >
