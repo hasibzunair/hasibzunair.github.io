@@ -223,27 +223,33 @@
 				<td width=260px>
 					<center>
 						<!--Add intro image here.-->
-						<img class="round" style="width:800px" src="./resources/vis_3d.png"/>
+						<img class="round" style="width:850px" src="./resources/combined1.gif"/>
+						<img class="round" style="width:850px" src="./resources/combined2.gif"/>
 					</center>
 				</td>
 			</tr>
 			
-			<!--For figure caption.-->
-			<!--
+			<!--For figure caption.
+			<img class="round" style="width:800px" src="./resources/vis_3d.png"/>
+			-->
+			
 			<tr><td width="600px">
 			<center>
-				<span style="font-size:14px"><i>This work proposes Res-M3D-VTON, a new pipeline for monocular to 3D virtual try-on (VTON) for fashion clothing, solving the limitations of exisiting state-of-the-art 3D VTON approaches, to an extent!</i>
+				<span style="font-size:14px"><i>Here are some results of our method on in-the-wild images. Given the <strong>reference person image</strong>
+					(left) and <strong>target clothing image</strong> (middle), our method can reconstruct the <strong>3D try-on mesh</strong> (right) with the clothing changed 
+					 and person identity retained.
+				</i>
 			</span></center>
 			</td>
 			</tr>
 			</tbody></table>
-			-->
 
 		</table>
 		<table align=center width=850px>
 			<tr>
-				<td>
-					This work proposes Res-M3D-VTON, a new pipeline for monocular to 3D virtual try-on (VTON) for fashion clothing, solving the limitations of exisiting state-of-the-art 3D VTON approaches, to an extent</a>!
+				<td><br>
+					<strong>TL;DR:</strong> Res-M3D-VTON is a pipeline for monocular to 3D virtual try-on (VTON) for 
+					fashion clothing which addresses the limitations of exisiting state-of-the-art 3D VTON approaches</a>!
 				</td>
 			</tr>
 		</table>
@@ -255,9 +261,37 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				My awesome abstract.
+				Virtual 3D virtual try-on aims to synthetically fit a target clothing image onto a 3D human shape 
+				while preserving realistic details such as pose, identity of the person. Existing methods heavily depend on 
+				annotated 3D shapes and garment templates 
+				which limits their practical use. While 2D virtual try-on is another alternative, it ignores the 3D body 
+				information and cannot fully represent the human body. Recently, <a href='https://arxiv.org/abs/2108.05126'>M3D-VTON</a> 
+				was proposed to generate 
+				textured 3D try-on meshes only from 2D images of person and clothing by formulating the 3D try-on problem
+				as 2D try-on and depth estimation. However, we find that the synthesis model in the M3D-VTON pipeline 
+				uses a simple U-Net architecture. We hypothesize that this is insufficient to synthesize body parts 
+				and differentiate between front and back parts of clothing only from the 2D image, 
+				ultimately leading to unrealistic 3D try-on results. We improve this by 
+				implementing residual units in the existing synthesis model. Studying it’s effect demonstrates that 
+				it improves 2D try-on outputs, mainly by <FONT COLOR="#46C646">differentiating between front and back part of clothing</FONT>, 
+				<FONT COLOR="#46C646">preserving logo of clothing</FONT> and <FONT COLOR="#46C646">reducing artifacts</FONT>. 
+				This ultimately results in better textured 
+				3D try-on mesh. Benchmarking our method on the MPV3D dataset shows that it performs better than 
+				previous works significantly.
+				<p></p>
+				<img class="round" style="width:800px" src="./resources/vis_3d.png"/>
 			</td>
 		</tr>
+
+		<tr><td width="600px">
+			<center>
+				<span style="font-size:14px"><i>Comparison of 2D and 3D try-on mesh outputs with recent state-of-the-art 
+					<a href='https://arxiv.org/abs/2108.05126'>M3D-VTON</a>.
+				</i>
+			</span></center>
+			</td>
+		</tr>
+
 	</table>
 	<hr>
 	<br>
@@ -282,7 +316,7 @@
 	-->
 
 	<!--Add demo code here with architecture.-->
-	<center><h1>Try our code</h1></center>
+	<center><h1>Method</h1></center>
 	<table align=center width=420px>
 		<center>
 			<tr>
@@ -295,7 +329,7 @@
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:1000px" src="./resources/model.png"/></td>
 				</center>
 			</td>
 		</tr>
@@ -304,7 +338,8 @@
 		<center>
 			<tr>
 				<td>
-					Add short description here.
+					<strong>Overview of the proposed framework</strong>. Left image taken from <a href='https://arxiv.org/abs/2108.05126'>M3D-VTON paper</a>.
+					Add more details here.
 				</td>
 			</tr>
 		</center>
@@ -312,7 +347,7 @@
 	<table align=center width=800px>
 		<br>
 		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/hasibzunair/res-m3d-vton'>[GitHub]</a> Demo
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/hasibzunair/res-m3d-vton#running-on-custom-images'>[GitHub]</a> Demo
 			</center>
 		</span>
 	</table>
@@ -330,20 +365,28 @@
 				</td>
 			</tr>
 			<!--For figure caption.-->
-			<!--
+
 			<tr><td width="600px">
 			<center>
-				<span style="font-size:14px"><i>This work proposes Res-M3D-VTON, a new pipeline for monocular to 3D virtual try-on (VTON) for fashion clothing, solving the limitations of exisiting state-of-the-art 3D VTON approaches, to an extent!</i>
+				<span style="font-size:14px"><i>Visual comparison of 2D try-on outputs with <a href='https://arxiv.org/abs/2108.05126'>M3D-VTON</a>.</i>
 			</span></center>
 			</td>
 			</tr>
 			</tbody></table>
-			-->
+
 		</table>
 		<table align=center width=850px>
 			<tr>
 				<td>
-					Say how cool the new method is.</a>
+					Here we show some examples of the final try-on outputs compared to previous work. 
+					In many cases, we see that the baseline model is unable to <FONT COLOR="#ff0000">differentiate between the
+					front and back of clothing</FONT>. It also tends to <FONT COLOR="#ff0000">change the skin color of the person</FONT>. 
+					The baseline model also <FONT COLOR="#ff0000">fails to preserve the logo of clothing image</FONT>. This is due 
+					to the limited capability of the U-Net architecture employed in the baseline model. In comparison, 
+					the proposed method generates realistic try-on results which <strong>differentiates front and 
+					back part of clothing</strong>, <strong> preserve logo of clothing</strong>. It also <strong>reduces 
+					artifacts</strong> in non-target body parts such as skin.
+</a>
 				</td>
 			</tr>
 		</table>
