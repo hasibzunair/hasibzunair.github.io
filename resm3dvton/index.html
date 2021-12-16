@@ -200,18 +200,40 @@
 			</tbody></table>
 			
 			<!--Add supplementary links here.-->
-			<table align=center width=250px>
+			<table align=center width=350px>
 				<tr>
 					<td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href=''>[Paper]</a></span>
 						</center>
 					</td>
+
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://youtu.be/K9CrFKPUGNs'>[Video]</a></span><br>
+						</center>
+					</td>
+
+					
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='resources/COMP6381_ResM3DVTON_Presentation.pdf'>[Slides]</a></span><br>
+						</center>
+					</td>
+					
+				<!-- 
 					<td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href='https://github.com/hasibzunair/res-m3d-vton'>[GitHub]</a></span><br>
 						</center>
 					</td>
+				-->
+
+					
+
+
+
+
 				</tr>
 			</table>
 		</table>
@@ -249,7 +271,8 @@
 			<tr>
 				<td><br>
 					<strong>TL;DR:</strong> Res-M3D-VTON is a pipeline for monocular to 3D virtual try-on (VTON) for 
-					fashion clothing which addresses the limitations of exisiting state-of-the-art 3D VTON approaches.</a>
+					fashion clothing which uses residual learning to synthesize correct clothing parts, preserve logo of
+					clothing and reduce artifacts to finally output better textured 3D try-on meshes.</a>
 				</td>
 			</tr>
 		</table>
@@ -263,20 +286,21 @@
 			<td>
 				Virtual 3D virtual try-on aims to synthetically fit a target clothing image onto a 3D human shape 
 				while preserving realistic details such as pose, identity of the person. Existing methods heavily depend on 
-				annotated 3D shapes and garment templates 
-				which limits their practical use. While 2D virtual try-on is another alternative, it ignores the 3D body 
-				information and cannot fully represent the human body. Recently, <a href='https://arxiv.org/abs/2108.05126'>M3D-VTON</a> 
+				<FONT COLOR="#ff0000">annotated 3D shapes</FONT> and <FONT COLOR="#ff0000">garment templates</FONT> 
+				which limits their practical use. While 2D virtual try-on is another alternative, it <FONT COLOR="#ff0000">ignores the 
+				3D body information</FONT> 
+				and <FONT COLOR="#ff0000">cannot fully represent the human body</FONT>. Recently, <strong><a href='https://arxiv.org/abs/2108.05126'>M3D-VTON</a></strong>
 				was proposed to generate 
 				textured 3D try-on meshes only from 2D images of person and clothing by formulating the 3D try-on problem
 				as 2D try-on and depth estimation. However, we find that the synthesis model in the M3D-VTON pipeline 
 				uses a simple U-Net architecture. We hypothesize that this is insufficient to synthesize body parts 
-				and differentiate between front and back parts of clothing only from the 2D image, 
+				and model complex relation between front and back parts of clothing only from the 2D clothing image, 
 				ultimately leading to unrealistic 3D try-on results. We improve this by 
 				implementing residual units in the existing synthesis model. Studying it’s effect demonstrates that 
 				it improves 2D try-on outputs, mainly by <FONT COLOR="#46C646">differentiating between front and back part of clothing</FONT>, 
 				<FONT COLOR="#46C646">preserving logo of clothing</FONT> and <FONT COLOR="#46C646">reducing artifacts</FONT>. 
-				This ultimately results in better textured 
-				3D try-on mesh. Benchmarking our method on the MPV3D dataset shows that it performs better than 
+				This ultimately results in <FONT COLOR="#46C646">better textured 
+				3D try-on mesh</FONT>. Benchmarking our method on the MPV3D dataset shows that it performs better than 
 				previous works significantly.
 				<p></p>
 				<img class="round" style="width:800px" src="./resources/vis_3d.png"/>
@@ -339,7 +363,32 @@
 			<tr>
 				<td>
 					<strong>Overview of the proposed framework</strong>. Left image taken from <a href='https://arxiv.org/abs/2108.05126'>M3D-VTON paper</a>.
-					Add more details here.
+					
+					This is an overview of the 3D virtual try-on pipeline that we build on (left). 
+					We can see that there are many components involved. The major components are monocular prediction,
+					depth refinement and texture fusion.
+					
+					<p></p>
+
+					The monocular prediction module produces warped clothing, person segmentation and double depth maps 
+					which give a base 3D shape. The depth refinement module produces the refined depth maps which 
+					capture the warped clothing details as well as the high frequency details which the previous 
+					module oversmooths. The texture fusion module merges the warped clothing with unchanged person 
+					part to output 2D try-on results. After getting the 2D try-on and depth map, we unproject 
+					the front-view and back-view depth maps to get 3D point clouds and triangulate them with 
+					screened poisson reconstruction. Since the try-on image and depth maps are spatially aligned, the 
+					try-on image can be used to color the front side of the mesh. As for the back texture, 
+					the image is inpainting using fast marching method where the face area is filled with 
+					surrounding hair color and is then mirrored to finally texture the back side of the mesh. 
+					This allows us to achieve the monocular-to-3D conversion, producing the reconstructed 3D 
+					try-on mesh with the clothing changed and person identity retained.
+
+					<p></p>
+
+					We improve the texture fusion module as it combines all the previous outputs to 
+					get the final 2D try-on results and error in this step will adversely affect the final 
+					textured 3D try-on mesh. We do this by implementing residual connections, shown in right.
+
 				</td>
 			</tr>
 		</center>
@@ -347,7 +396,7 @@
 	<table align=center width=800px>
 		<br>
 		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/hasibzunair/res-m3d-vton#running-on-custom-images'>[GitHub]</a> Demo
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/hasibzunair/res-m3d-vton#running-on-custom-images'>[GitHub]</a> Demo on custom images
 			</center>
 		</span>
 	</table>
