@@ -242,6 +242,49 @@
         <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
         <td width="25%">
           <div class="one">
+            <div class="two" id = 'jump_image'><img src='vista_cvprw2022.png'></div>
+            <img src='vista_cvprw2022.png'>
+          </div>
+          <script type="text/javascript">
+            function jump_start() {
+              document.getElementById('jump_image').style.opacity = "1";
+            }
+            function jump_stop() {
+              document.getElementById('jump_image').style.opacity = "0";
+            }
+            jump_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+          <p><a href="https://arxiv.org/abs/2204.11024">
+          <papertitle>VISTA: Vision Transformer enhanced by U-Net and Image Colorfulness Frame Filtration for Automatic Retail Checkout</papertitle></a><br>
+          Authors : Md. Istiak Hossain Shihab†, Nazia Tasnim†, <strong>Hasib Zunair</strong>†, Labiba Kanij Rupty, Nabeel Mohammed<br>
+          <p>† equal contribution</p> 
+          <em>AI City Challenge, CVPR Workshops</em>, 2022<br>
+          </p>
+          <a href="https://arxiv.org/abs/2204.11024">Paper</a> / 
+          <a href="https://github.com/istiakshihab/automated-retail-checkout-aicity22">Code</a> /
+          <a href="https://github.com/NVIDIAAICITYCHALLENGE/2022AICITY_Code_From_Top_Teams/">Leaderboard <font color="red">(3rd place)</font></a>
+
+            <p>
+              Given a frame from a video sequence, we first segment single product item and hand followed 
+              by entropy masking to address the domain bias problem, and then a
+              Vision Transformer (ViT) for multi-class classification. We also propose a custom metric that 
+              discards frames not having any product items, utilizing several image 
+              processing methods.Our method achieved 3rd place in the <a href="https://www.aicitychallenge.org/2022-data-and-evaluation/"> AI City Challenge, Track 4</a>.</p>
+            <p></p>
+            </a></p>
+          </td>
+        </tr>
+      </table>
+
+
+
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+        <td width="25%">
+          <div class="one">
             <div class="two" id = 'jump_image'><img src='cu_thesis.jpg'></div>
             <img src='cu_thesis.jpg'>
           </div>
