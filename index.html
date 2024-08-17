@@ -170,6 +170,39 @@
         <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
         <td width="25%">
           <div class="one">
+            <div class="two" id = 'jump_image'><img src='bmvc2024-peekaboo.jpg'></div>
+            <img src='bmvc2024-peekaboo.jpg'>
+          </div>
+          <script type="text/javascript">
+            function jump_start() {
+              document.getElementById('jump_image').style.opacity = "1";
+            }
+            function jump_stop() {
+              document.getElementById('jump_image').style.opacity = "0";
+            }
+            jump_stop()
+          </script>
+        </td>
+        <td valign="top" width="75%">
+          <p><a href="https://arxiv.org/abs/2407.17628">
+          <papertitle>PEEKABOO: Hiding Parts of an Image for Unsupervised Object Localization</papertitle></a><br>
+          <strong>Hasib Zunair</strong>, A. Ben Hamza<br>
+          <em>British Machine Vision Conference</em>, 2024<br>
+          <a href="https://arxiv.org/abs/2407.17628">Paper</a> / 
+          <a href="https://github.com/hasibzunair/peekaboo">Code</a> /
+          <a href="https://hasibzunair.github.io/peekaboo/">Website</a>
+          <p>
+            A segmentation model with zero-shot generalization to unfamiliar images and objects that 
+            are small, reflective or under poor illumination without the need for additional training.
+          </p>
+          </td>
+        </tr>
+      </table>
+
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" ></tr>
+        <td width="25%">
+          <div class="one">
             <div class="two" id = 'jump_image'><img src='rsud20k_icip.png'></div>
             <img src='rsud20k_icip.png'>
           </div>
